@@ -1,0 +1,30 @@
+/* styles.css */
+.btn-primary {
+    @apply text-base bg-navy_blue text-white py-2 px-4 rounded-lg hover:bg-penn_blue focus:outline-none ;
+
+  }
+
+  .btn-primary-add-event {
+    @apply text-sm h-min place-self-center bg-navy_blue text-white py-2 px-4 rounded-lg hover:bg-penn_blue focus:outline-none ;
+
+  }
+
+  .btn-primary-disabled {
+    @apply text-base bg-navy_blue text-white py-2 px-4 rounded-lg hover:bg-penn_blue focus:outline-none hidden ;
+
+  }
+  
+
+.input-primary {
+    @apply my-4 block w-full p-2 text-gray-900 border rounded-lg text-base  border-gray-600 placeholder-gray-400  focus:border-red-900;
+  }
+
+
+.add-event-h3 {
+    @apply uppercase mb-2 text-navy_blue text-lg font-bold xl:text-2xl;
+}
+
+
+.popup-overlay {
+  @apply bg-white/80
+}
