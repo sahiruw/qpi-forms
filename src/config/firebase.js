@@ -30,7 +30,8 @@ const app = getApp();
 
 const db = getFirestore(app);
 const store = getStorage(app);
+const authFb = getAuth(app);
 
 
-export { db, store };
+export { db, store , authFb};
 // module.exports = { db, store };

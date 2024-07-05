@@ -5,7 +5,7 @@ const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem("site") || "");
+  const [token, setToken] = useState(localStorage.getItem("qpi-frm") || "");
 
   useEffect(() => {
     const loggedUser = getCurrentUser();
@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const loginAction = async (data) => {
-    let loggedUser = login(data);
+    let loggedUser = await login(data);
     setUser(loggedUser);
     return loggedUser;
   };

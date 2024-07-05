@@ -7,36 +7,21 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import Home from "./pages/Home";
 import Login from "./pages/Login";
 import UserInterface from "./navigation/userNavigation";
 import AdminInterface from "./navigation/adminNavigation";
 import ProtectedRoute from "./navigation/protectedRoutes";
-import { getCurrentUser, login, logout } from "./services/authService";
-import NavBar from "./components/NavBar";
 import NotFound from "./pages/NotFound";
 import './styles/commonStyles.css'
 
 const App = () => {
   return (
-    <div className="w-full">
-      {/* <NavBar /> */}
+    <div className="w-full bg-gradient-to-tr from-slate-800 via-sky-600 to-blue-900 h-dvh">
       <Router>
         <Routes>
-          <Route
-            path=""
-            element={
-              <ProtectedRoute
-                component={Home}
-                allowedRoles={["all"]}
-                tag={"home"}
-              />
-            }
-          />
-          
 
           <Route
-            path="/login"
+            path="/"
             element={
               <ProtectedRoute
                 component={Login}
