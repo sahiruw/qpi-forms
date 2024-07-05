@@ -9,7 +9,7 @@ const ProtectedRoute = ({ component: Component, allowedRoles, tag, ...rest }) =>
   console.log()
   if (allowedRoles.includes("all")) {
     if (user?.role) {
-      let x = `/${String(user.role).charAt(0)}`;
+      let x = `/${String(user.role).charAt(0)}/tools`;
       console.log("redirecting to " + x )
       return <Navigate to={x} />;
     } else {
