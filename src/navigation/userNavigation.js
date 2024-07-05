@@ -13,7 +13,6 @@ function UserInterface() {
       <div className="relative  w-full items-center flex  z-0  min-h-screen">
         <div className="relative flex items-center h-full w-full">
           <Routes>
-            <Route path="/" element={<User />} />
             <Route path="/tools/" element={<EmployeeForm />} />
             <Route path="/repairs/" element={<EmployeeForm2 />} />
           </Routes>

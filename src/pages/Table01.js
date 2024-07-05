@@ -19,7 +19,7 @@ const ToolRequestsTable = () => {
   const [lastVisible, setLastVisible] = useState(null);
   const [loading, setLoading] = useState(false);
   const [noMoreData, setNoMoreData] = useState(false);
-  const [perPage, setPerPage] = useState(20);
+  const [perPage, setPerPage] = useState(25);
   const [filter, setFilter] = useState("all");
   const [visibleData, setVisibleData] = useState([]);
   const [popupImage, setPopupImage] = useState(null);
@@ -135,7 +135,7 @@ const ToolRequestsTable = () => {
   return (
     <div className="p-2 md:p-4 mt-20 w-full h-full   flex flex-col items-center justify-center    md:place-self-center  text-navy_blue">
       <div className="w-full bg-white md:m-6 rounded-md p-4 md:p-8 ">
-        <h2 className="text-2xl font-bold mb-5 text-center">Tool Requests</h2>
+        <h2 className="text-5xl font-bold mb-5 text-center">Tool Requests</h2>
         <div className=" text-sm mb-4 justify-center">
           <button
             onClick={() => handleFilterChange("all")}
@@ -171,8 +171,8 @@ const ToolRequestsTable = () => {
           </button>
         </div>
         <div className="overflow-y-scroll overflow-x-scroll md:overflow-auto  mt-2">
-          <table className="w-full table-auto overflow-scroll md:overflow-auto  text-left font-inter border-separate border-spacing-y-0 ">
-            <thead>
+          <table className="rounded-lg w-full table-auto overflow-scroll md:overflow-auto  text-left font-inter border-separate border-spacing-y-0 ">
+            <thead className="bg-gray-500/50 rounded-md">
               <tr>
                 <th className="px-4 py-2 border">Employee Number</th>
                 <th className="px-4 py-2 border">Part Number</th>
@@ -185,7 +185,7 @@ const ToolRequestsTable = () => {
             </thead>
             <tbody>
               {visibleData.map((request, index) => (
-                <tr key={index} className="hover:bg-gray-100">
+                <tr key={index} className="hover:bg-gray-100 even:bg-gray-200/20">
                   <td className="px-4 py-2 border">{request.employeeNumber}</td>
                   <td className="px-4 py-2 border">{request.partNumber}</td>
                   <td className="px-4 py-2 border">{request.description}</td>
